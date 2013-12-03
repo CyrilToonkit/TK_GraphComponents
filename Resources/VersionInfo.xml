@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Versions>
+	<Version>
+		<Major>1</Major>
+		<Minor>0</Minor>
+		<Build>1</Build>
+		<BuildDate>2012-02-01T19:37:25.164125+01:00</BuildDate>
+		<BuildComment>BUGFIX GeometryTools Envelope precision insured near 0 (double precision, fix the deformerweight spreading syndrome)|FEATURE GeometryTools CleanEnvelope will now be able to remove deformers weights inferior to a value, and not only remove deformers that are always under a value.|FEATURE AnimTools When "retiming" we can now snap resulting values to an integer (this is the default). This value is editable in "File" Menu.</BuildComment>
+		<Backup></Backup>
+	</Version>
+</Versions>
