@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TK.GraphComponents</RootNamespace>
+    <AssemblyName>TK_GraphComponents</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TK_BaseLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TK_BaseLib\bin\$(Configuration)\TK_BaseLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\ActionCtrl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animation\ActionCtrl.designer.cs">
+      <DependentUpon>ActionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation\ActionSorter.cs" />
+    <Compile Include="Animation\ActionsUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animation\ActionsUI.designer.cs">
+      <DependentUpon>ActionsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArlequinPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DraggableTBLineCollection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DraggableTBLineCollection.Designer.cs">
+      <DependentUpon>DraggableTBLineCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DraggableTB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DraggableTB.Designer.cs">
+      <DependentUpon>DraggableTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DraggableTBLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DraggableTBLine.Designer.cs">
+      <DependentUpon>DraggableTBLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDroppableCollection.cs" />
+    <Compile Include="Animation\MappingsCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animation\MappingsCtrl.Designer.cs">
+      <DependentUpon>MappingsCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation\RemapRow.cs" />
+    <Compile Include="Animation\SaveActionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animation\SaveActionCtrl.Designer.cs">
+      <DependentUpon>SaveActionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CollapsibleGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FolderBrowserEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FolderBrowserEdit.Designer.cs">
+      <DependentUpon>FolderBrowserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MimicForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MimicForm.Designer.cs">
+      <DependentUpon>MimicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation\PictureDimensions.cs" />
+    <Compile Include="Animation\RetimeCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animation\RetimeCtrl.Designer.cs">
+      <DependentUpon>RetimeCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomData\AlternateSaveAbleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomData\MyCollectionEditor.cs" />
+    <Compile Include="CustomData\PreferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomData\PreferencesForm.designer.cs">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CompleteSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompleteSlider.Designer.cs">
+      <DependentUpon>CompleteSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomToolTip.Designer.cs">
+      <DependentUpon>CustomToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FloatingListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FloatingListBox.Designer.cs">
+      <DependentUpon>FloatingListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Animation\ImageSorter.cs" />
+    <Compile Include="Animation\MiniPlayerUCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Animation\MiniPlayerUCtrl.designer.cs">
+      <DependentUpon>MiniPlayerUCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RealSlider.Designer.cs">
+      <DependentUpon>RealSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StablePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StablePanel.Designer.cs">
+      <DependentUpon>StablePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stringNodesTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="stringNodesTreeView.Designer.cs">
+      <DependentUpon>stringNodesTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TKDropDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TKMessageBox.cs" />
+    <Compile Include="TK_EmptyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_EmptyForm.Designer.cs">
+      <DependentUpon>TK_EmptyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TK_INFO.cs" />
+    <Compile Include="TK_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_Splash.Designer.cs">
+      <DependentUpon>TK_Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransparentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animation\WarpBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Animation\WarpBar.Designer.cs">
+      <DependentUpon>WarpBar.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Animation\RetimeCtrl.resx">
+      <DependentUpon>RetimeCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomData\PreferencesForm.resx">
+      <DependentUpon>PreferencesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompleteSlider.resx">
+      <DependentUpon>CompleteSlider.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animation\MiniPlayerUCtrl.resx">
+      <DependentUpon>MiniPlayerUCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TK_Splash.resx">
+      <DependentUpon>TK_Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Splash_2011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Animation\ActionCtrl.resx">
+      <DependentUpon>ActionCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animation\ActionsUI.resx">
+      <DependentUpon>ActionsUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SplashBack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Anim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Cycle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Pose.png" />
+    <EmbeddedResource Include="TK_EmptyForm.resx">
+      <DependentUpon>TK_EmptyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AnimBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DraggableTBLineCollection.resx">
+      <DependentUpon>DraggableTBLineCollection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DraggableTB.resx">
+      <DependentUpon>DraggableTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DraggableTBLine.resx">
+      <DependentUpon>DraggableTBLine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animation\MappingsCtrl.resx">
+      <DependentUpon>MappingsCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Animation\SaveActionCtrl.resx">
+      <DependentUpon>SaveActionCtrl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Apply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Store.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FolderBrowserEdit.resx">
+      <DependentUpon>FolderBrowserEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DraggableGrip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keying_Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keying_Keyed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keying_OnKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\VersionInfo.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

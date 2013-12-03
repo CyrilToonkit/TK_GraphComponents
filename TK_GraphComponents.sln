@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TK_GraphComponents", "TK_GraphComponents.csproj", "{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TGVExplore", "TGVExplore\TGVExplore.csproj", "{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphTester", "GraphTester\GraphTester.csproj", "{1A6120F7-8A1F-4BDC-8BD0-CB0BADF31EB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6120F7-8A1F-4BDC-8BD0-CB0BADF31EB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6120F7-8A1F-4BDC-8BD0-CB0BADF31EB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6120F7-8A1F-4BDC-8BD0-CB0BADF31EB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6120F7-8A1F-4BDC-8BD0-CB0BADF31EB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
