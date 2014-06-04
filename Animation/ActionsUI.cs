@@ -50,6 +50,13 @@ namespace TK.GraphComponents.Animation
         public void LoadPoses()
         {
             Ctrls.Clear();
+            categories.Clear();
+            int count = CategDropDownButton.DropDownItems.Count;
+            while(count > 5)
+            {
+                count--;
+                CategDropDownButton.DropDownItems.RemoveAt(count);
+            }
 
             foreach(TK_Action action in library.Actions)
             {
@@ -190,12 +197,22 @@ namespace TK.GraphComponents.Animation
             }
         }
 
+        ActionsEditor _editor = new ActionsEditor();
         Dictionary<string, bool> categories = new Dictionary<string, bool>();
         List<ActionCtrl> Ctrls = new List<ActionCtrl>();
         ActionSorter sorter = new ActionSorter(Fields.Name);
         TK_ActionLibrary library = null;
         Dictionary<ActionTypes, Image> icons = new Dictionary<ActionTypes, Image>();
         bool MuteEvents = false;
+
+        void propertyGrid1_PropertyValueChanged(object s, System.Windows.Forms.PropertyValueChangedEventArgs e)
+        {
+            if (_editor.IsReady)
+            {
+                saveBT.Enabled = _editor.IsModified;
+            }
+        }
+
         public Dictionary<ActionTypes, Image> Icons
         {
             get { return icons; }
@@ -243,6 +260,8 @@ namespace TK.GraphComponents.Animation
                 actionCtrl.Selected = true;
                 selectedActionCtrls.Add(actionCtrl);
             }
+
+            propertyGrid1.SelectedObjects = _editor.SetActions(selectedActionCtrls).ToArray();
         }
 
         internal void ToggleSelection(ActionCtrl actionCtrl)
@@ -257,6 +276,8 @@ namespace TK.GraphComponents.Animation
                 actionCtrl.Selected = false;
                 selectedActionCtrls.Remove(actionCtrl);
             }
+
+            propertyGrid1.SelectedObjects = _editor.SetActions(selectedActionCtrls).ToArray();
         }
 
         internal void RemoveFromSelection(ActionCtrl actionCtrl)
@@ -266,6 +287,8 @@ namespace TK.GraphComponents.Animation
                 actionCtrl.Selected = false;
                 selectedActionCtrls.Remove(actionCtrl);
             }
+
+            propertyGrid1.SelectedObjects = _editor.SetActions(selectedActionCtrls).ToArray();
         }
 
         internal void Select(ActionCtrl actionCtrl)
@@ -273,6 +296,8 @@ namespace TK.GraphComponents.Animation
             DeselectAll();
             actionCtrl.Selected = true;
             selectedActionCtrls.Add(actionCtrl);
+
+            propertyGrid1.SelectedObjects = _editor.SetActions(selectedActionCtrls).ToArray();
         }
 
         internal void DeselectAll()
@@ -283,6 +308,8 @@ namespace TK.GraphComponents.Animation
             }
 
             selectedActionCtrls.Clear();
+
+            propertyGrid1.SelectedObjects = _editor.SetActions(selectedActionCtrls).ToArray();
         }
 
         //Display
@@ -750,6 +777,40 @@ namespace TK.GraphComponents.Animation
         private void AdvForcedResizing_ValueChanged(object sender, EventArgs e)
         {
             library.Options.ForcedResizing = decimal.ToDouble(AdvForcedResizing.Value);
+        }
+
+        private void saveBT_Click(object sender, EventArgs e)
+        {
+            if (_editor.IsReady)
+            {
+                foreach (ActionTunnel act in _editor.Actions)
+                {
+                    if (act.ActionName != act.Action.Name)
+                    {
+                        //Get a unique name
+                        act.ActionName = library.GetUniqueName(act.ActionName);
+
+                        //Rename files and folders
+                        PathHelper.SearchReplace(act.Action.Name, act.ActionName, act.Action.GetPath(), true, true);
+                    }
+
+                    act.ValidateModifications();
+
+                    string errors = library.SaveAction(act.Action);
+                    if (errors != "")
+                    {
+                        MessageBox.Show(errors, "Save action error");
+                        break;
+                    }
+                }
+
+                DeselectAll();
+
+                //Reload
+                LoadPoses();
+
+                saveBT.Enabled = _editor.IsModified;
+            }
         }
     }
 }

@@ -38,8 +38,13 @@ namespace TK.GraphComponents
             mMaxLabel.AutoSize = true; 
             mMaxLabel.Visible = false;
 
+            mDefaultLabel = new Label();
+            mDefaultLabel.AutoSize = true;
+            mDefaultLabel.Visible = false;
+
             Controls.Add(mMinLabel);
             Controls.Add(mMaxLabel);
+            Controls.Add(mDefaultLabel);
 
             /*
             arlequinPanel.AddColor(Color.Blue, 0.33, "Bleu");
@@ -82,6 +87,16 @@ namespace TK.GraphComponents
                 mMinLabel.Visible = mMaxLabel.Visible = false;
             }
 
+            if (DisplayDefault)
+            {
+                mDefaultLabel.Text = PrintFrame(DefaultValue);
+                mDefaultLabel.Visible = true;
+            }
+            else
+            {
+                mDefaultLabel.Visible = false;
+            }
+
             UpdateDisplays();
         }
 
@@ -101,6 +116,9 @@ namespace TK.GraphComponents
             mMinLabel.Location = new Point(startX, fontY);
             mMaxLabel.Location = new Point(endX - (int)fontSize.Width, fontY);
 
+            double normalizedDefaultValue = ((double)DoubleDefaultValue - DoubleMinimum) / (DoubleMaximum - DoubleMinimum);
+            mDefaultLabel.Location = new Point(startX + (int)(normalizedDefaultValue * ((double)endX - 9 - (double)startX)), fontY);
+
             if (framesLabelsFrequency > 0)
             {
                 double frequency = framesLabelsFrequency;
@@ -118,7 +136,7 @@ namespace TK.GraphComponents
                     }
                     mLabels.Clear();
 
-                    for (double val = DoubleMinimum + frequency; val < DoubleMaximum; val++)
+                    for (double val = DoubleMinimum + frequency; val < DoubleMaximum; val += 1 / Math.Pow(10, Decimals))
                     {
                         if (val % frequency == 0)
                         {
@@ -154,6 +172,7 @@ namespace TK.GraphComponents
         private ArlequinPanel arlequinPanel = new ArlequinPanel();
         private Label mMinLabel;					// label for min value
         private Label mMaxLabel;                    // label for max value
+        private Label mDefaultLabel;                    // label for default value
         private List<Label> mLabels = new List<Label>();//intermediate Labels
         private Graphics mGraphics = null;			// the graphics object for the base trackbar
 
@@ -222,7 +241,7 @@ namespace TK.GraphComponents
             get { return _altFont; }
             set
             {
-                _altFont = mMinLabel.Font = mMaxLabel.Font = value;
+                _altFont = mMinLabel.Font = mMaxLabel.Font = mDefaultLabel.Font = value;
                 
                 foreach (Label label in mLabels)
                 {
@@ -239,7 +258,7 @@ namespace TK.GraphComponents
             get { return _altForeColor; }
             set
             {
-                _altForeColor = mMinLabel.ForeColor = mMaxLabel.ForeColor = value;
+                _altForeColor = mMinLabel.ForeColor = mMaxLabel.ForeColor = mDefaultLabel.ForeColor = value;
 
                 foreach (Label label in mLabels)
                 {
@@ -330,6 +349,15 @@ namespace TK.GraphComponents
         {
             get { return displayFrames; }
             set { displayFrames = value; UpdateLabels(); }
+        }
+
+        bool displayDefault = false;
+        [CategoryAttribute("Additional Display")]
+        [DescriptionAttribute("Display default value")]
+        public bool DisplayDefault
+        {
+            get { return displayDefault; }
+            set { displayDefault = value; UpdateLabels(); }
         }
 
         double framesLabelsFrequency = 0;

@@ -94,7 +94,22 @@ namespace TK.GraphComponents.Animation
             set
             {
                 m_fps = value;
-                PlayTimer.Interval = (int)(1000.0 / m_fps);
+                SetSpeed();
+            }
+        }
+
+        private void SetSpeed()
+        {
+            PlayTimer.Interval = (int)(1000.0 / m_fps);
+        }
+
+        double m_factor = 1.0;
+        public double Factor
+        {
+            get { return m_factor; }
+            set
+            {
+                m_factor = value;
             }
         }
 
@@ -336,7 +351,7 @@ namespace TK.GraphComponents.Animation
 
         private int GetFrame()
         {
-            return (int)((((double)watch.Elapsed.Ticks / 10000000.0) * m_fps) % (Loop ? Length : 1) + FrameOffset);
+            return (int)((((double)watch.Elapsed.Ticks / 10000000.0) * m_fps * m_factor) % (Loop ? Length : 1) + FrameOffset);
         }
 
         public void Flush()

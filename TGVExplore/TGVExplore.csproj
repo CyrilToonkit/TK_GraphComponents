@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EEB4DFB4-E6D0-4E6B-8124-B3C2F84C1147}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="TK_BaseLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TK_BaseLib\bin\$(Configuration)\TK_BaseLib.dll</HintPath>
+      <HintPath>..\..\TK_BaseLib\bin\Release\TK_BaseLib.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

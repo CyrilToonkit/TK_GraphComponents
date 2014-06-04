@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -43,6 +43,10 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TK_BaseLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TK_BaseLib\bin\Release\TK_BaseLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation\ActionCtrl.cs">
@@ -51,6 +55,7 @@
     <Compile Include="Animation\ActionCtrl.designer.cs">
       <DependentUpon>ActionCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Animation\ActionsEditor.cs" />
     <Compile Include="Animation\ActionSorter.cs" />
     <Compile Include="Animation\ActionsUI.cs">
       <SubType>UserControl</SubType>
@@ -58,8 +63,27 @@
     <Compile Include="Animation\ActionsUI.designer.cs">
       <DependentUpon>ActionsUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Animation\ActionTunnel.cs" />
     <Compile Include="ArlequinPanel.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Check\CheckCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Check\CheckCtrl.Designer.cs">
+      <DependentUpon>CheckCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckListCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Check\CheckListCtrl.Designer.cs">
+      <DependentUpon>CheckListCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Check\CheckListEditorCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Check\CheckListEditorCtrl.Designer.cs">
+      <DependentUpon>CheckListEditorCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="DraggableTBLineCollection.cs">
       <SubType>UserControl</SubType>
@@ -78,6 +102,12 @@
     </Compile>
     <Compile Include="DraggableTBLine.Designer.cs">
       <DependentUpon>DraggableTBLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FixedRatioUCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FixedRatioUCtrl.designer.cs">
+      <DependentUpon>FixedRatioUCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="IDroppableCollection.cs" />
     <Compile Include="Animation\MappingsCtrl.cs">
@@ -210,6 +240,9 @@
       <DependentUpon>PreferencesForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FixedRatioUCtrl.resx">
+      <DependentUpon>FixedRatioUCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -288,6 +321,12 @@
     <None Include="Resources\Store.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Check\CheckCtrl.resx">
+      <DependentUpon>CheckCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Check\CheckListEditorCtrl.resx">
+      <DependentUpon>CheckListEditorCtrl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FolderBrowserEdit.resx">
       <DependentUpon>FolderBrowserEdit.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -305,12 +344,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\VersionInfo.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TK_BaseLib\TK_BaseLib.csproj">
-      <Project>{cff5e0e3-f458-4053-a599-74f3453c6392}</Project>
-      <Name>TK_BaseLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

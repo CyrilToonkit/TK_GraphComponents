@@ -88,6 +88,15 @@ namespace TK.GraphComponents.Animation
             set { miniPlayerUCtrl1.Warped = value; }
         }
 
+        public double Factor
+        {
+            get { return miniPlayerUCtrl1.Factor; }
+            set
+            {
+                miniPlayerUCtrl1.Factor = value;
+            }
+        }
+
         void RetimeForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Flush();
@@ -233,6 +242,11 @@ namespace TK.GraphComponents.Animation
             {
                 miniPlayerUCtrl1.Stop();
             }
+        }
+
+        private void completeSlider2_ValueChanged(object sender, EventArgs e)
+        {
+            Factor = completeSlider2.DoubleValue;
         }
     }
 

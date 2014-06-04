@@ -33,8 +33,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.realSlider1 = new TK.GraphComponents.RealSlider();
+            this.checkListEditorCtrl1 = new TK.GraphComponents.Check.CheckListEditorCtrl();
             this.completeSlider1 = new TK.GraphComponents.CompleteSlider();
+            this.realSlider1 = new TK.GraphComponents.RealSlider();
             this.arlequinPanel1 = new TK.GraphComponents.ArlequinPanel();
             this.folderBrowserEdit1 = new TK.GraphComponents.FolderBrowserEdit();
             this.tkDropDown1 = new TK.GraphComponents.TKDropDown();
@@ -69,7 +70,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(83, 231);
+            this.trackBar1.Location = new System.Drawing.Point(49, 191);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(104, 45);
             this.trackBar1.TabIndex = 14;
@@ -77,7 +78,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(677, 144);
+            this.checkBox1.Location = new System.Drawing.Point(566, 337);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 20;
@@ -85,29 +86,12 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // realSlider1
+            // checkListEditorCtrl1
             // 
-            this.realSlider1.Decimals = 0;
-            this.realSlider1.DefaultOnMiddleClick = true;
-            this.realSlider1.DefaultValue = 0;
-            this.realSlider1.DisplayFrames = true;
-            this.realSlider1.DisplayTexts = false;
-            this.realSlider1.DoubleDefaultValue = 0;
-            this.realSlider1.DoubleMaximum = 10;
-            this.realSlider1.DoubleMinimum = 0;
-            this.realSlider1.DoubleValue = 0;
-            this.realSlider1.EndText = "";
-            this.realSlider1.FramesLabelsDynamicFrequency = false;
-            this.realSlider1.FramesLabelsFrequency = 0;
-            this.realSlider1.HasDefault = false;
-            this.realSlider1.Location = new System.Drawing.Point(408, 219);
-            this.realSlider1.Name = "realSlider1";
-            this.realSlider1.ShowIntervals = true;
-            this.realSlider1.Size = new System.Drawing.Size(104, 45);
-            this.realSlider1.SliderFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.realSlider1.SliderForeColor = System.Drawing.Color.Gray;
-            this.realSlider1.StartText = "";
-            this.realSlider1.TabIndex = 26;
+            this.checkListEditorCtrl1.Location = new System.Drawing.Point(255, 9);
+            this.checkListEditorCtrl1.Name = "checkListEditorCtrl1";
+            this.checkListEditorCtrl1.Size = new System.Drawing.Size(549, 267);
+            this.checkListEditorCtrl1.TabIndex = 30;
             // 
             // completeSlider1
             // 
@@ -115,6 +99,7 @@
             this.completeSlider1.ButtonStatus = TK.GraphComponents.SliderButtonStatus.Empty;
             this.completeSlider1.Decimals = 0;
             this.completeSlider1.DefaultValue = 2;
+            this.completeSlider1.DisplayDefault = false;
             this.completeSlider1.DisplayEditBox = true;
             this.completeSlider1.DisplayEditBoxBackColor = System.Drawing.SystemColors.Window;
             this.completeSlider1.DisplayEditButton = false;
@@ -145,9 +130,34 @@
             this.completeSlider1.Value = 0;
             this.completeSlider1.ValueChanged += new System.EventHandler(this.completeSlider1_ValueChanged);
             // 
+            // realSlider1
+            // 
+            this.realSlider1.Decimals = 1;
+            this.realSlider1.DefaultOnMiddleClick = true;
+            this.realSlider1.DefaultValue = 5;
+            this.realSlider1.DisplayDefault = true;
+            this.realSlider1.DisplayFrames = true;
+            this.realSlider1.DisplayTexts = false;
+            this.realSlider1.DoubleDefaultValue = 0.5;
+            this.realSlider1.DoubleMaximum = 1;
+            this.realSlider1.DoubleMinimum = 0;
+            this.realSlider1.DoubleValue = 0;
+            this.realSlider1.EndText = "";
+            this.realSlider1.FramesLabelsDynamicFrequency = false;
+            this.realSlider1.FramesLabelsFrequency = 0;
+            this.realSlider1.HasDefault = false;
+            this.realSlider1.Location = new System.Drawing.Point(49, 231);
+            this.realSlider1.Name = "realSlider1";
+            this.realSlider1.ShowIntervals = false;
+            this.realSlider1.Size = new System.Drawing.Size(104, 45);
+            this.realSlider1.SliderFont = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.realSlider1.SliderForeColor = System.Drawing.Color.Gray;
+            this.realSlider1.StartText = "";
+            this.realSlider1.TabIndex = 26;
+            // 
             // arlequinPanel1
             // 
-            this.arlequinPanel1.Location = new System.Drawing.Point(364, 27);
+            this.arlequinPanel1.Location = new System.Drawing.Point(222, 279);
             this.arlequinPanel1.Name = "arlequinPanel1";
             this.arlequinPanel1.Size = new System.Drawing.Size(200, 100);
             this.arlequinPanel1.TabIndex = 24;
@@ -187,11 +197,11 @@
             this.collapsibleGroup1.Controls.Add(this.label1);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(825, 0);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(804, 0);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 150;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(349, 391);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(370, 391);
             this.collapsibleGroup1.TabIndex = 1;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "collapsibleGroup1";
@@ -202,7 +212,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(343, 326);
+            this.label3.Size = new System.Drawing.Size(364, 326);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,7 +223,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 342);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(343, 23);
+            this.label2.Size = new System.Drawing.Size(364, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,7 +234,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 365);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 23);
+            this.label1.Size = new System.Drawing.Size(364, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,18 +244,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 391);
-            this.Controls.Add(this.realSlider1);
+            this.Controls.Add(this.checkListEditorCtrl1);
             this.Controls.Add(this.completeSlider1);
-            this.Controls.Add(this.arlequinPanel1);
+            this.Controls.Add(this.realSlider1);
             this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.arlequinPanel1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.folderBrowserEdit1);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tkDropDown1);
             this.Controls.Add(this.collapsibleGroup1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "TchecKer BETA : New CheckList";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.realSlider1)).EndInit();
@@ -270,6 +281,7 @@
         private TK.GraphComponents.ArlequinPanel arlequinPanel1;
         private TK.GraphComponents.RealSlider realSlider1;
         private TK.GraphComponents.CompleteSlider completeSlider1;
+        private TK.GraphComponents.Check.CheckListEditorCtrl checkListEditorCtrl1;
 
 
 
