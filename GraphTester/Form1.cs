@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using TK.GraphComponents;
 using TK.BaseLib;
 using TK.BaseLib.Picture;
+using TK.BaseLib.Checking;
 
 namespace GraphTester
 {
@@ -48,6 +49,11 @@ namespace GraphTester
 
             List<object> objs = new List<object> { "Coco", "Limbo", "Bozo" };
             tkDropDown1.Items = objs;
+
+            //retimeCtrl1.OpenSequence("Z:\\0004_Triples\\LES_TRIPLES\\04_LT_Work\\Actions\\Gigote\\Sequence", true, false);
+            //retimeCtrl1.Factor = 2;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

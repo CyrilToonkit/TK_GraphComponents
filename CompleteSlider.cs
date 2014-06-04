@@ -264,6 +264,14 @@ namespace TK.GraphComponents
         }
 
         [CategoryAttribute("Additional Display")]
+        [DescriptionAttribute("Display default value")]
+        public bool DisplayDefault
+        {
+            get { return realSlider.DisplayDefault; }
+            set { realSlider.DisplayDefault = value;}
+        }
+
+        [CategoryAttribute("Additional Display")]
         [DescriptionAttribute("Display additional labels for intermediate values")]
         public double FramesLabelsFrequency
         {

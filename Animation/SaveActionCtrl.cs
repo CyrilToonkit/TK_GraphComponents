@@ -223,5 +223,10 @@ namespace TK.GraphComponents.Animation
         {
             actionName = nameTB.Text;
         }
+
+        private void storeBT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

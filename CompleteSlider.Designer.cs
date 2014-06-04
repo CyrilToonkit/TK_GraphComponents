@@ -83,6 +83,7 @@
             this.realSlider.Decimals = 0;
             this.realSlider.DefaultOnMiddleClick = true;
             this.realSlider.DefaultValue = 0;
+            this.realSlider.DisplayDefault = false;
             this.realSlider.DisplayFrames = true;
             this.realSlider.DisplayTexts = false;
             this.realSlider.Dock = System.Windows.Forms.DockStyle.Fill;

@@ -112,7 +112,7 @@ namespace TK.GraphComponents.CustomData
         public void Init(string inName, object inPrefObject, string baseFolder, string baseFileName, AlternateSaveAbleEditor alternateContent)
         {
             Data = inPrefObject as SaveableData;
-            DirectoryInfo baseFolderInfo = PathHelper.DirectoryInfo(baseFolder);
+            DirectoryInfo baseFolderInfo = new DirectoryInfo(baseFolder);
 
             if (!baseFolderInfo.Exists)
             {
@@ -153,7 +153,7 @@ namespace TK.GraphComponents.CustomData
         /// </summary>
         private void Save()
         {
-            Data.Save( PathHelper.ExpandedPath(BaseFolder + "\\" + BaseFileName));
+            Data.Save(BaseFolder + "\\" + BaseFileName);
             Changed = false;
         }
 
@@ -278,7 +278,7 @@ namespace TK.GraphComponents.CustomData
         /// <param name="e"></param>
         private void revertToDefaultsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Data.Load(PathHelper.ExpandedPath(BaseFolder + "\\Default.xml")))
+            if (Data.Load(BaseFolder + "\\Default.xml"))
             {
                 if (alternateContent != null)
                 {
