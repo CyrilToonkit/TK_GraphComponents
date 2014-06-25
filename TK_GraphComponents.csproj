@@ -81,6 +81,12 @@
     <Compile Include="Check\CheckListEditorCtrl.Designer.cs">
       <DependentUpon>CheckListEditorCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\LongMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\LongMessageForm.Designer.cs">
+      <DependentUpon>LongMessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DraggableTBLineCollection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     <EmbeddedResource Include="CustomData\PreferencesForm.resx">
       <DependentUpon>PreferencesForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\LongMessageForm.resx">
+      <DependentUpon>LongMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixedRatioUCtrl.resx">
       <DependentUpon>FixedRatioUCtrl.cs</DependentUpon>

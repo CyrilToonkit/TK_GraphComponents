@@ -197,11 +197,11 @@
             this.collapsibleGroup1.Controls.Add(this.label1);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(804, 0);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(803, 0);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 150;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(370, 391);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(371, 391);
             this.collapsibleGroup1.TabIndex = 1;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "collapsibleGroup1";
@@ -212,7 +212,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(364, 326);
+            this.label3.Size = new System.Drawing.Size(365, 326);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +223,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 342);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(364, 23);
+            this.label2.Size = new System.Drawing.Size(365, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -234,7 +234,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 365);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(364, 23);
+            this.label1.Size = new System.Drawing.Size(365, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

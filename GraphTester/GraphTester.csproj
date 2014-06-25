@@ -46,10 +46,6 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TK_BaseLib, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\TK_BaseLib\bin\Release\TK_BaseLib.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -94,6 +90,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\TK_BaseLib\TK_BaseLib.csproj">
+      <Project>{CFF5E0E3-F458-4053-A599-74F3453C6392}</Project>
+      <Name>TK_BaseLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TK_GraphComponents.csproj">
       <Project>{AC2979F7-D4D6-4B8A-8B29-FB27D722E3D4}</Project>
       <Name>TK_GraphComponents</Name>
