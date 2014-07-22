@@ -127,13 +127,19 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.AdvApplyTimesNUD = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.AdvMarginNUD = new System.Windows.Forms.NumericUpDown();
             this.label = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.AdvCleanKeysCheck = new System.Windows.Forms.CheckBox();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.AdvRippleCheck = new System.Windows.Forms.CheckBox();
             this.AdvKeyPosesCheck = new System.Windows.Forms.CheckBox();
+            this.AdvCleanKeysCheck = new System.Windows.Forms.CheckBox();
             this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -160,12 +166,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
-            this.AdvRippleCheck = new System.Windows.Forms.CheckBox();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AdvApplyTimesNUD = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.actionsContext.SuspendLayout();
@@ -195,9 +195,12 @@
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvApplyTimesNUD)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdvMarginNUD)).BeginInit();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
             this.collapsibleGroup2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -214,9 +217,6 @@
             this.groupBox7.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.tableLayoutPanel17.SuspendLayout();
-            this.tableLayoutPanel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdvApplyTimesNUD)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -716,7 +716,7 @@
             this.ActionsFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ActionsFlow.Location = new System.Drawing.Point(0, 0);
             this.ActionsFlow.Name = "ActionsFlow";
-            this.ActionsFlow.Size = new System.Drawing.Size(426, 204);
+            this.ActionsFlow.Size = new System.Drawing.Size(605, 403);
             this.ActionsFlow.TabIndex = 0;
             this.ActionsFlow.Click += new System.EventHandler(this.ActionsFlow_Click);
             // 
@@ -849,23 +849,23 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 25);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(622, 204);
+            this.panel11.Size = new System.Drawing.Size(622, 403);
             this.panel11.TabIndex = 4;
             // 
             // collapsibleGroup3
             // 
             this.collapsibleGroup3.AllowResize = false;
-            this.collapsibleGroup3.Collapsed = false;
+            this.collapsibleGroup3.Collapsed = true;
             this.collapsibleGroup3.CollapseOnClick = true;
             this.collapsibleGroup3.Controls.Add(this.propertyGrid1);
             this.collapsibleGroup3.Controls.Add(this.saveBT);
             this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup3.Location = new System.Drawing.Point(426, 0);
+            this.collapsibleGroup3.Location = new System.Drawing.Point(605, 0);
             this.collapsibleGroup3.Name = "collapsibleGroup3";
             this.collapsibleGroup3.OpenedBaseHeight = 196;
-            this.collapsibleGroup3.OpenedBaseWidth = 184;
-            this.collapsibleGroup3.Size = new System.Drawing.Size(196, 204);
+            this.collapsibleGroup3.OpenedBaseWidth = 197;
+            this.collapsibleGroup3.Size = new System.Drawing.Size(17, 403);
             this.collapsibleGroup3.TabIndex = 4;
             this.collapsibleGroup3.TabStop = false;
             this.collapsibleGroup3.Text = "Edit actions";
@@ -882,7 +882,7 @@
             this.propertyGrid1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(190, 162);
+            this.propertyGrid1.Size = new System.Drawing.Size(11, 361);
             this.propertyGrid1.TabIndex = 1;
             this.propertyGrid1.ToolbarVisible = false;
             this.propertyGrid1.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -892,9 +892,9 @@
             // 
             this.saveBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.saveBT.Enabled = false;
-            this.saveBT.Location = new System.Drawing.Point(3, 178);
+            this.saveBT.Location = new System.Drawing.Point(3, 377);
             this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(190, 23);
+            this.saveBT.Size = new System.Drawing.Size(11, 23);
             this.saveBT.TabIndex = 2;
             this.saveBT.Text = "SAVE ACTIONS";
             this.saveBT.UseVisualStyleBackColor = true;
@@ -903,16 +903,16 @@
             // collapsibleGroup1
             // 
             this.collapsibleGroup1.AllowResize = false;
-            this.collapsibleGroup1.Collapsed = false;
+            this.collapsibleGroup1.Collapsed = true;
             this.collapsibleGroup1.CollapseOnClick = true;
             this.collapsibleGroup1.Controls.Add(this.tableLayoutPanel1);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 229);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 428);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
-            this.collapsibleGroup1.OpenedBaseHeight = 196;
+            this.collapsibleGroup1.OpenedBaseHeight = 217;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 216);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 17);
             this.collapsibleGroup1.TabIndex = 3;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "Advanced options";
@@ -932,16 +932,16 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(616, 197);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(616, 0);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel6);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(3, 101);
+            this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(302, 93);
+            this.groupBox4.Size = new System.Drawing.Size(302, 1);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Retime/Resizing";
@@ -958,7 +958,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(296, 74);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(296, 0);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // tableLayoutPanel8
@@ -1023,7 +1023,7 @@
             this.panel5.Location = new System.Drawing.Point(2, 2);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(152, 70);
+            this.panel5.Size = new System.Drawing.Size(152, 1);
             this.panel5.TabIndex = 0;
             // 
             // tableLayoutPanel7
@@ -1036,7 +1036,7 @@
             this.tableLayoutPanel7.Controls.Add(this.AdvRetimeNUD, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 45);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, -24);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1107,9 +1107,9 @@
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel3);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(311, 101);
+            this.groupBox2.Location = new System.Drawing.Point(311, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 93);
+            this.groupBox2.Size = new System.Drawing.Size(302, 1);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MetaData";
@@ -1127,7 +1127,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(296, 74);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(296, 0);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // toolStrip3
@@ -1137,9 +1137,9 @@
             this.toolStrip3.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AdvModelsDD});
-            this.toolStrip3.Location = new System.Drawing.Point(129, 49);
+            this.toolStrip3.Location = new System.Drawing.Point(129, 0);
             this.toolStrip3.Name = "toolStrip3";
-            this.toolStrip3.Size = new System.Drawing.Size(167, 25);
+            this.toolStrip3.Size = new System.Drawing.Size(167, 1);
             this.toolStrip3.TabIndex = 1;
             this.toolStrip3.Text = "toolStrip3";
             // 
@@ -1148,7 +1148,7 @@
             this.AdvModelsDD.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.AdvModelsDD.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AdvModelsDD.Name = "AdvModelsDD";
-            this.AdvModelsDD.Size = new System.Drawing.Size(104, 22);
+            this.AdvModelsDD.Size = new System.Drawing.Size(104, 0);
             this.AdvModelsDD.Text = "- select a model";
             // 
             // panel2
@@ -1159,13 +1159,13 @@
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(125, 70);
+            this.panel2.Size = new System.Drawing.Size(125, 1);
             this.panel2.TabIndex = 0;
             // 
             // AdvEditInfosBT
             // 
             this.AdvEditInfosBT.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AdvEditInfosBT.Location = new System.Drawing.Point(0, 47);
+            this.AdvEditInfosBT.Location = new System.Drawing.Point(0, -22);
             this.AdvEditInfosBT.Name = "AdvEditInfosBT";
             this.AdvEditInfosBT.Size = new System.Drawing.Size(125, 23);
             this.AdvEditInfosBT.TabIndex = 1;
@@ -1190,7 +1190,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(311, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 92);
+            this.groupBox1.Size = new System.Drawing.Size(302, 1);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Retargeting";
@@ -1208,16 +1208,16 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(296, 73);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(296, 0);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // AdvOpenCompleteCB
             // 
             this.AdvOpenCompleteCB.AutoSize = true;
             this.AdvOpenCompleteCB.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AdvOpenCompleteCB.Location = new System.Drawing.Point(151, 53);
+            this.AdvOpenCompleteCB.Location = new System.Drawing.Point(151, 3);
             this.AdvOpenCompleteCB.Name = "AdvOpenCompleteCB";
-            this.AdvOpenCompleteCB.Size = new System.Drawing.Size(142, 17);
+            this.AdvOpenCompleteCB.Size = new System.Drawing.Size(142, 1);
             this.AdvOpenCompleteCB.TabIndex = 4;
             this.AdvOpenCompleteCB.Text = "even if complete";
             this.AdvOpenCompleteCB.UseVisualStyleBackColor = true;
@@ -1231,7 +1231,7 @@
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 69);
+            this.panel1.Size = new System.Drawing.Size(144, 1);
             this.panel1.TabIndex = 0;
             // 
             // AdvPopupCB
@@ -1240,7 +1240,7 @@
             this.AdvPopupCB.Checked = true;
             this.AdvPopupCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AdvPopupCB.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AdvPopupCB.Location = new System.Drawing.Point(0, 52);
+            this.AdvPopupCB.Location = new System.Drawing.Point(0, -16);
             this.AdvPopupCB.Name = "AdvPopupCB";
             this.AdvPopupCB.Size = new System.Drawing.Size(144, 17);
             this.AdvPopupCB.TabIndex = 3;
@@ -1268,7 +1268,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 92);
+            this.groupBox3.Size = new System.Drawing.Size(302, 1);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Keys";
@@ -1285,7 +1285,7 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(296, 73);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(296, 0);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // panel4
@@ -1296,8 +1296,70 @@
             this.panel4.Location = new System.Drawing.Point(153, 0);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(143, 73);
+            this.panel4.Size = new System.Drawing.Size(143, 1);
             this.panel4.TabIndex = 1;
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 3;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel18.Controls.Add(this.label8, 2, 0);
+            this.tableLayoutPanel18.Controls.Add(this.AdvApplyTimesNUD, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(143, 25);
+            this.tableLayoutPanel18.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Location = new System.Drawing.Point(101, 6);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "times";
+            // 
+            // AdvApplyTimesNUD
+            // 
+            this.AdvApplyTimesNUD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AdvApplyTimesNUD.Location = new System.Drawing.Point(53, 3);
+            this.AdvApplyTimesNUD.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.AdvApplyTimesNUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AdvApplyTimesNUD.Name = "AdvApplyTimesNUD";
+            this.AdvApplyTimesNUD.Size = new System.Drawing.Size(42, 20);
+            this.AdvApplyTimesNUD.TabIndex = 5;
+            this.AdvApplyTimesNUD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Apply";
             // 
             // tableLayoutPanel5
             // 
@@ -1309,7 +1371,7 @@
             this.tableLayoutPanel5.Controls.Add(this.AdvMarginNUD, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 48);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, -24);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1364,20 +1426,39 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 73);
+            this.panel3.Size = new System.Drawing.Size(153, 1);
             this.panel3.TabIndex = 0;
             // 
-            // AdvCleanKeysCheck
+            // tableLayoutPanel17
             // 
-            this.AdvCleanKeysCheck.AutoSize = true;
-            this.AdvCleanKeysCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdvCleanKeysCheck.Location = new System.Drawing.Point(3, 51);
-            this.AdvCleanKeysCheck.Name = "AdvCleanKeysCheck";
-            this.AdvCleanKeysCheck.Size = new System.Drawing.Size(147, 19);
-            this.AdvCleanKeysCheck.TabIndex = 2;
-            this.AdvCleanKeysCheck.Text = "Clean keys";
-            this.AdvCleanKeysCheck.UseVisualStyleBackColor = true;
-            this.AdvCleanKeysCheck.CheckedChanged += new System.EventHandler(this.AdvCleanKeysCheck_CheckedChanged);
+            this.tableLayoutPanel17.ColumnCount = 1;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Controls.Add(this.AdvRippleCheck, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.AdvKeyPosesCheck, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.AdvCleanKeysCheck, 0, 2);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 3;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(153, 1);
+            this.tableLayoutPanel17.TabIndex = 6;
+            // 
+            // AdvRippleCheck
+            // 
+            this.AdvRippleCheck.AutoSize = true;
+            this.AdvRippleCheck.Checked = true;
+            this.AdvRippleCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AdvRippleCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdvRippleCheck.Location = new System.Drawing.Point(3, 3);
+            this.AdvRippleCheck.Name = "AdvRippleCheck";
+            this.AdvRippleCheck.Size = new System.Drawing.Size(147, 1);
+            this.AdvRippleCheck.TabIndex = 3;
+            this.AdvRippleCheck.Text = "Ripple keys";
+            this.AdvRippleCheck.UseVisualStyleBackColor = true;
             // 
             // AdvKeyPosesCheck
             // 
@@ -1385,11 +1466,23 @@
             this.AdvKeyPosesCheck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdvKeyPosesCheck.Location = new System.Drawing.Point(3, 3);
             this.AdvKeyPosesCheck.Name = "AdvKeyPosesCheck";
-            this.AdvKeyPosesCheck.Size = new System.Drawing.Size(147, 18);
+            this.AdvKeyPosesCheck.Size = new System.Drawing.Size(147, 1);
             this.AdvKeyPosesCheck.TabIndex = 1;
             this.AdvKeyPosesCheck.Text = "Auto key on apply pose";
             this.AdvKeyPosesCheck.UseVisualStyleBackColor = true;
             this.AdvKeyPosesCheck.CheckedChanged += new System.EventHandler(this.AdvKeyPosesCheck_CheckedChanged);
+            // 
+            // AdvCleanKeysCheck
+            // 
+            this.AdvCleanKeysCheck.AutoSize = true;
+            this.AdvCleanKeysCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdvCleanKeysCheck.Location = new System.Drawing.Point(3, 3);
+            this.AdvCleanKeysCheck.Name = "AdvCleanKeysCheck";
+            this.AdvCleanKeysCheck.Size = new System.Drawing.Size(147, 1);
+            this.AdvCleanKeysCheck.TabIndex = 2;
+            this.AdvCleanKeysCheck.Text = "Clean keys";
+            this.AdvCleanKeysCheck.UseVisualStyleBackColor = true;
+            this.AdvCleanKeysCheck.CheckedChanged += new System.EventHandler(this.AdvCleanKeysCheck_CheckedChanged);
             // 
             // collapsibleGroup2
             // 
@@ -1741,99 +1834,6 @@
             this.checkBox5.Text = "Do retarget";
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel17
-            // 
-            this.tableLayoutPanel17.ColumnCount = 1;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Controls.Add(this.AdvRippleCheck, 0, 1);
-            this.tableLayoutPanel17.Controls.Add(this.AdvKeyPosesCheck, 0, 0);
-            this.tableLayoutPanel17.Controls.Add(this.AdvCleanKeysCheck, 0, 2);
-            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
-            this.tableLayoutPanel17.RowCount = 3;
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(153, 73);
-            this.tableLayoutPanel17.TabIndex = 6;
-            // 
-            // AdvRippleCheck
-            // 
-            this.AdvRippleCheck.AutoSize = true;
-            this.AdvRippleCheck.Checked = true;
-            this.AdvRippleCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AdvRippleCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AdvRippleCheck.Location = new System.Drawing.Point(3, 27);
-            this.AdvRippleCheck.Name = "AdvRippleCheck";
-            this.AdvRippleCheck.Size = new System.Drawing.Size(147, 18);
-            this.AdvRippleCheck.TabIndex = 3;
-            this.AdvRippleCheck.Text = "Ripple keys";
-            this.AdvRippleCheck.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel18
-            // 
-            this.tableLayoutPanel18.ColumnCount = 3;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel18.Controls.Add(this.label8, 2, 0);
-            this.tableLayoutPanel18.Controls.Add(this.AdvApplyTimesNUD, 1, 0);
-            this.tableLayoutPanel18.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 1;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(143, 25);
-            this.tableLayoutPanel18.TabIndex = 6;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(101, 6);
-            this.label8.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 13);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "times";
-            // 
-            // AdvApplyTimesNUD
-            // 
-            this.AdvApplyTimesNUD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AdvApplyTimesNUD.Location = new System.Drawing.Point(53, 3);
-            this.AdvApplyTimesNUD.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.AdvApplyTimesNUD.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.AdvApplyTimesNUD.Name = "AdvApplyTimesNUD";
-            this.AdvApplyTimesNUD.Size = new System.Drawing.Size(42, 20);
-            this.AdvApplyTimesNUD.TabIndex = 5;
-            this.AdvApplyTimesNUD.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label9.Location = new System.Drawing.Point(3, 6);
-            this.label9.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Apply";
-            // 
             // ActionsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1886,10 +1886,15 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AdvApplyTimesNUD)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AdvMarginNUD)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel17.PerformLayout();
             this.collapsibleGroup2.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -1913,11 +1918,6 @@
             this.tableLayoutPanel14.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.tableLayoutPanel17.ResumeLayout(false);
-            this.tableLayoutPanel17.PerformLayout();
-            this.tableLayoutPanel18.ResumeLayout(false);
-            this.tableLayoutPanel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdvApplyTimesNUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
