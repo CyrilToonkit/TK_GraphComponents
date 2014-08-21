@@ -87,6 +87,12 @@
     <Compile Include="Dialogs\LongMessageForm.Designer.cs">
       <DependentUpon>LongMessageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\TextInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TextInputForm.Designer.cs">
+      <DependentUpon>TextInputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DraggableTBLineCollection.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\LongMessageForm.resx">
       <DependentUpon>LongMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TextInputForm.resx">
+      <DependentUpon>TextInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixedRatioUCtrl.resx">
       <DependentUpon>FixedRatioUCtrl.cs</DependentUpon>
