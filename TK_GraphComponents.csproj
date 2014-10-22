@@ -212,6 +212,12 @@
     <Compile Include="stringNodesTreeView.Designer.cs">
       <DependentUpon>stringNodesTreeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TitledForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TitledForm.Designer.cs">
+      <DependentUpon>TitledForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TKDropDown.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     <EmbeddedResource Include="Animation\MiniPlayerUCtrl.resx">
       <DependentUpon>MiniPlayerUCtrl.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitledForm.resx">
+      <DependentUpon>TitledForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TK_Splash.resx">
       <DependentUpon>TK_Splash.cs</DependentUpon>
