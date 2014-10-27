@@ -140,6 +140,8 @@
             this.AdvRippleCheck = new System.Windows.Forms.CheckBox();
             this.AdvKeyPosesCheck = new System.Windows.Forms.CheckBox();
             this.AdvCleanKeysCheck = new System.Windows.Forms.CheckBox();
+            this.FormatsGrp = new System.Windows.Forms.GroupBox();
+            this.AdvNativeFormatsCheck = new System.Windows.Forms.CheckBox();
             this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -201,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AdvMarginNUD)).BeginInit();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
+            this.FormatsGrp.SuspendLayout();
             this.collapsibleGroup2.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -716,7 +719,7 @@
             this.ActionsFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ActionsFlow.Location = new System.Drawing.Point(0, 0);
             this.ActionsFlow.Name = "ActionsFlow";
-            this.ActionsFlow.Size = new System.Drawing.Size(604, 402);
+            this.ActionsFlow.Size = new System.Drawing.Size(599, 401);
             this.ActionsFlow.TabIndex = 0;
             this.ActionsFlow.Click += new System.EventHandler(this.ActionsFlow_Click);
             // 
@@ -849,7 +852,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 25);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(622, 402);
+            this.panel11.Size = new System.Drawing.Size(622, 401);
             this.panel11.TabIndex = 4;
             // 
             // collapsibleGroup3
@@ -861,11 +864,11 @@
             this.collapsibleGroup3.Controls.Add(this.saveBT);
             this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup3.Location = new System.Drawing.Point(604, 0);
+            this.collapsibleGroup3.Location = new System.Drawing.Point(599, 0);
             this.collapsibleGroup3.Name = "collapsibleGroup3";
             this.collapsibleGroup3.OpenedBaseHeight = 196;
             this.collapsibleGroup3.OpenedBaseWidth = 197;
-            this.collapsibleGroup3.Size = new System.Drawing.Size(18, 402);
+            this.collapsibleGroup3.Size = new System.Drawing.Size(23, 401);
             this.collapsibleGroup3.TabIndex = 4;
             this.collapsibleGroup3.TabStop = false;
             this.collapsibleGroup3.Text = "Edit actions";
@@ -882,7 +885,7 @@
             this.propertyGrid1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(12, 360);
+            this.propertyGrid1.Size = new System.Drawing.Size(17, 359);
             this.propertyGrid1.TabIndex = 1;
             this.propertyGrid1.ToolbarVisible = false;
             this.propertyGrid1.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -892,9 +895,9 @@
             // 
             this.saveBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.saveBT.Enabled = false;
-            this.saveBT.Location = new System.Drawing.Point(3, 376);
+            this.saveBT.Location = new System.Drawing.Point(3, 375);
             this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(12, 23);
+            this.saveBT.Size = new System.Drawing.Size(17, 23);
             this.saveBT.TabIndex = 2;
             this.saveBT.Text = "SAVE ACTIONS";
             this.saveBT.UseVisualStyleBackColor = true;
@@ -906,13 +909,14 @@
             this.collapsibleGroup1.Collapsed = true;
             this.collapsibleGroup1.CollapseOnClick = true;
             this.collapsibleGroup1.Controls.Add(this.tableLayoutPanel1);
+            this.collapsibleGroup1.Controls.Add(this.FormatsGrp);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 427);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 426);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
-            this.collapsibleGroup1.OpenedBaseHeight = 217;
+            this.collapsibleGroup1.OpenedBaseHeight = 252;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 18);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 19);
             this.collapsibleGroup1.TabIndex = 3;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "Advanced options";
@@ -927,7 +931,7 @@
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 53);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -1031,7 +1035,7 @@
             this.tableLayoutPanel7.ColumnCount = 3;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel7.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.AdvRetimeNUD, 1, 0);
             this.tableLayoutPanel7.Controls.Add(this.label3, 0, 0);
@@ -1047,10 +1051,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(93, 6);
+            this.label2.Location = new System.Drawing.Point(103, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "* speed";
             // 
@@ -1070,7 +1074,7 @@
             0,
             131072});
             this.AdvRetimeNUD.Name = "AdvRetimeNUD";
-            this.AdvRetimeNUD.Size = new System.Drawing.Size(37, 20);
+            this.AdvRetimeNUD.Size = new System.Drawing.Size(47, 20);
             this.AdvRetimeNUD.TabIndex = 5;
             this.AdvRetimeNUD.Value = new decimal(new int[] {
             1,
@@ -1484,6 +1488,31 @@
             this.AdvCleanKeysCheck.UseVisualStyleBackColor = true;
             this.AdvCleanKeysCheck.CheckedChanged += new System.EventHandler(this.AdvCleanKeysCheck_CheckedChanged);
             // 
+            // FormatsGrp
+            // 
+            this.FormatsGrp.Controls.Add(this.AdvNativeFormatsCheck);
+            this.FormatsGrp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.FormatsGrp.Location = new System.Drawing.Point(3, 16);
+            this.FormatsGrp.Name = "FormatsGrp";
+            this.FormatsGrp.Size = new System.Drawing.Size(616, 37);
+            this.FormatsGrp.TabIndex = 3;
+            this.FormatsGrp.TabStop = false;
+            this.FormatsGrp.Text = "Formats";
+            // 
+            // AdvNativeFormatsCheck
+            // 
+            this.AdvNativeFormatsCheck.AutoSize = true;
+            this.AdvNativeFormatsCheck.Checked = true;
+            this.AdvNativeFormatsCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AdvNativeFormatsCheck.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AdvNativeFormatsCheck.Location = new System.Drawing.Point(3, 16);
+            this.AdvNativeFormatsCheck.Name = "AdvNativeFormatsCheck";
+            this.AdvNativeFormatsCheck.Size = new System.Drawing.Size(610, 18);
+            this.AdvNativeFormatsCheck.TabIndex = 2;
+            this.AdvNativeFormatsCheck.Text = "Use native file formats";
+            this.AdvNativeFormatsCheck.UseVisualStyleBackColor = true;
+            this.AdvNativeFormatsCheck.CheckedChanged += new System.EventHandler(this.AdvNativeFormatsCheck_CheckedChanged);
+            // 
             // collapsibleGroup2
             // 
             this.collapsibleGroup2.AllowResize = false;
@@ -1895,6 +1924,8 @@
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel17.PerformLayout();
+            this.FormatsGrp.ResumeLayout(false);
+            this.FormatsGrp.PerformLayout();
             this.collapsibleGroup2.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -2062,6 +2093,8 @@
         private System.Windows.Forms.NumericUpDown AdvApplyTimesNUD;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox AdvRippleCheck;
+        private System.Windows.Forms.GroupBox FormatsGrp;
+        private System.Windows.Forms.CheckBox AdvNativeFormatsCheck;
 
     }
 }

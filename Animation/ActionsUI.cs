@@ -700,6 +700,11 @@ namespace TK.GraphComponents.Animation
 
         // ADVANCED OPTIONS CHANGED
 
+        private void AdvNativeFormatsCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            library.Options.UseNativeFormats = AdvNativeFormatsCheck.Checked;
+        }
+
         private void AdvKeyPosesCheck_CheckedChanged(object sender, EventArgs e)
         {
             library.Options.AutoKeyPose = AdvKeyPosesCheck.Checked;
