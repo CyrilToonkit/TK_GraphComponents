@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TypesDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.posesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +81,7 @@
             this.frameTB = new System.Windows.Forms.ToolStripTextBox();
             this.applyFrameModeToolStrip = new System.Windows.Forms.ToolStripDropDownButton();
             this.useCurrentFrameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.actionsContext = new System.Windows.Forms.ContextMenuStrip();
+            this.actionsContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteActionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ActionsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
