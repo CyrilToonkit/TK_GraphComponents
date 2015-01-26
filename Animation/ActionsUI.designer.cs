@@ -719,7 +719,7 @@
             this.ActionsFlow.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ActionsFlow.Location = new System.Drawing.Point(0, 0);
             this.ActionsFlow.Name = "ActionsFlow";
-            this.ActionsFlow.Size = new System.Drawing.Size(599, 401);
+            this.ActionsFlow.Size = new System.Drawing.Size(597, 403);
             this.ActionsFlow.TabIndex = 0;
             this.ActionsFlow.Click += new System.EventHandler(this.ActionsFlow_Click);
             // 
@@ -852,7 +852,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 25);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(622, 401);
+            this.panel11.Size = new System.Drawing.Size(622, 403);
             this.panel11.TabIndex = 4;
             // 
             // collapsibleGroup3
@@ -864,11 +864,11 @@
             this.collapsibleGroup3.Controls.Add(this.saveBT);
             this.collapsibleGroup3.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup3.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup3.Location = new System.Drawing.Point(599, 0);
+            this.collapsibleGroup3.Location = new System.Drawing.Point(597, 0);
             this.collapsibleGroup3.Name = "collapsibleGroup3";
             this.collapsibleGroup3.OpenedBaseHeight = 196;
             this.collapsibleGroup3.OpenedBaseWidth = 197;
-            this.collapsibleGroup3.Size = new System.Drawing.Size(23, 401);
+            this.collapsibleGroup3.Size = new System.Drawing.Size(25, 403);
             this.collapsibleGroup3.TabIndex = 4;
             this.collapsibleGroup3.TabStop = false;
             this.collapsibleGroup3.Text = "Edit actions";
@@ -885,7 +885,7 @@
             this.propertyGrid1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.propertyGrid1.Location = new System.Drawing.Point(3, 16);
             this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(17, 359);
+            this.propertyGrid1.Size = new System.Drawing.Size(19, 361);
             this.propertyGrid1.TabIndex = 1;
             this.propertyGrid1.ToolbarVisible = false;
             this.propertyGrid1.ViewBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
@@ -895,9 +895,9 @@
             // 
             this.saveBT.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.saveBT.Enabled = false;
-            this.saveBT.Location = new System.Drawing.Point(3, 375);
+            this.saveBT.Location = new System.Drawing.Point(3, 377);
             this.saveBT.Name = "saveBT";
-            this.saveBT.Size = new System.Drawing.Size(17, 23);
+            this.saveBT.Size = new System.Drawing.Size(19, 23);
             this.saveBT.TabIndex = 2;
             this.saveBT.Text = "SAVE ACTIONS";
             this.saveBT.UseVisualStyleBackColor = true;
@@ -912,11 +912,11 @@
             this.collapsibleGroup1.Controls.Add(this.FormatsGrp);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.None;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 426);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(0, 428);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
-            this.collapsibleGroup1.OpenedBaseHeight = 252;
+            this.collapsibleGroup1.OpenedBaseHeight = 253;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 19);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(622, 17);
             this.collapsibleGroup1.TabIndex = 3;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "Advanced options";
@@ -1502,8 +1502,6 @@
             // AdvNativeFormatsCheck
             // 
             this.AdvNativeFormatsCheck.AutoSize = true;
-            this.AdvNativeFormatsCheck.Checked = true;
-            this.AdvNativeFormatsCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AdvNativeFormatsCheck.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdvNativeFormatsCheck.Location = new System.Drawing.Point(3, 16);
             this.AdvNativeFormatsCheck.Name = "AdvNativeFormatsCheck";

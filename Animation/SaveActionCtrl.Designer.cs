@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaveActionCtrl));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.captureDD = new TK.GraphComponents.TKDropDown();
             this.categoryTB = new System.Windows.Forms.TextBox();
             this.endFrameN = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.nameTB = new System.Windows.Forms.TextBox();
-            this.typeDD = new TK.GraphComponents.TKDropDown();
             this.startFrameN = new System.Windows.Forms.NumericUpDown();
             this.CategoryLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.storeBT = new System.Windows.Forms.Button();
+            this.captureDD = new TK.GraphComponents.TKDropDown();
+            this.typeDD = new TK.GraphComponents.TKDropDown();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.endFrameN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startFrameN)).BeginInit();
@@ -102,19 +102,6 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Capture mode :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // captureDD
-            // 
-            this.captureDD.AllowCustomValue = false;
-            this.captureDD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.captureDD.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("captureDD.Items")));
-            this.captureDD.Location = new System.Drawing.Point(111, 138);
-            this.captureDD.Name = "captureDD";
-            this.captureDD.ReadOnly = true;
-            this.captureDD.SelectedIndex = -1;
-            this.captureDD.Size = new System.Drawing.Size(138, 20);
-            this.captureDD.TabIndex = 19;
-            this.captureDD.TextChanged += new System.EventHandler(this.captureDD_TextChanged);
             // 
             // categoryTB
             // 
@@ -202,19 +189,6 @@
             this.nameTB.Size = new System.Drawing.Size(138, 20);
             this.nameTB.TabIndex = 9;
             this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
-            // 
-            // typeDD
-            // 
-            this.typeDD.AllowCustomValue = false;
-            this.typeDD.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.typeDD.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("typeDD.Items")));
-            this.typeDD.Location = new System.Drawing.Point(111, 30);
-            this.typeDD.Name = "typeDD";
-            this.typeDD.ReadOnly = true;
-            this.typeDD.SelectedIndex = -1;
-            this.typeDD.Size = new System.Drawing.Size(138, 20);
-            this.typeDD.TabIndex = 10;
-            this.typeDD.TextChanged += new System.EventHandler(this.typeDD_TextChanged);
             // 
             // startFrameN
             // 
@@ -337,6 +311,32 @@
             this.storeBT.TabIndex = 0;
             this.storeBT.UseVisualStyleBackColor = true;
             this.storeBT.Click += new System.EventHandler(this.storeBT_Click);
+            // 
+            // captureDD
+            // 
+            this.captureDD.AllowCustomValue = false;
+            this.captureDD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.captureDD.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("captureDD.Items")));
+            this.captureDD.Location = new System.Drawing.Point(111, 138);
+            this.captureDD.Name = "captureDD";
+            this.captureDD.ReadOnly = true;
+            this.captureDD.SelectedIndex = -1;
+            this.captureDD.Size = new System.Drawing.Size(138, 20);
+            this.captureDD.TabIndex = 19;
+            this.captureDD.TextChanged += new System.EventHandler(this.captureDD_TextChanged);
+            // 
+            // typeDD
+            // 
+            this.typeDD.AllowCustomValue = false;
+            this.typeDD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.typeDD.Items = ((System.Collections.Generic.List<object>)(resources.GetObject("typeDD.Items")));
+            this.typeDD.Location = new System.Drawing.Point(111, 30);
+            this.typeDD.Name = "typeDD";
+            this.typeDD.ReadOnly = true;
+            this.typeDD.SelectedIndex = -1;
+            this.typeDD.Size = new System.Drawing.Size(138, 20);
+            this.typeDD.TabIndex = 10;
+            this.typeDD.TextChanged += new System.EventHandler(this.typeDD_TextChanged);
             // 
             // SaveActionCtrl
             // 
