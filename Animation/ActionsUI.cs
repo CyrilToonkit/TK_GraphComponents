@@ -629,7 +629,7 @@ namespace TK.GraphComponents.Animation
 
                 string potentialS = actions.Count > 1 ? "s" : "";
 
-                if (TKMessageBox.Confirm("Are you sure you want to delete the action" + potentialS + " : " + actionsList + " ?", "Delete Action" + potentialS) == DialogResult.OK)
+                if (TKMessageBox.Confirm("Are you sure you want to delete the action" + potentialS + " : " + actionsList + " ?", "Delete Action" + potentialS))
                 {
                     DeselectAll();
 

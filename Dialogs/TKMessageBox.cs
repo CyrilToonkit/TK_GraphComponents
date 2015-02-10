@@ -57,9 +57,9 @@ namespace TK.GraphComponents.Dialogs
             return MessageBox.Show(Message, Caption,MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public static DialogResult Confirm(string Message, string Caption)
+        public static bool Confirm(string Message, string Caption)
         {
-            return MessageBox.Show(Message, Caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            return MessageBox.Show(Message, Caption, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK;
         }
     }
 }
