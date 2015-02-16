@@ -116,7 +116,7 @@ namespace TK.GraphComponents
             }
         }
 
-        public string Text
+        public new string Text
         {
             get { return PathTB.Text; }
             set { PathTB.Text = value; }

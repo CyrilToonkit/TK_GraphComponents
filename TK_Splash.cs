@@ -36,7 +36,6 @@ namespace TK.GraphComponents
         double elapsed = 0;
         int BackMargin = 0;
         int remainingDays = 0;
-        bool closing = false;
         bool loads = false;
 
         public bool Granted
@@ -103,7 +102,6 @@ namespace TK.GraphComponents
         {
             elapsed = DURATION * .75;
             loads = false; 
-            closing = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
