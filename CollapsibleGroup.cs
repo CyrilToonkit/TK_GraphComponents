@@ -276,25 +276,25 @@ namespace TK.GraphComponents
                 switch (Dock)
                 {
                     case DockStyle.Top:
-                        if (MouseLocation.Y > Height - 7)
+                        if (MouseLocation.Y > Height - 8)
                         {
                             return 3;
                         }
                         break;
                     case DockStyle.Right:
-                        if (MouseLocation.X < 7)
+                        if (MouseLocation.X < 8)
                         {
                             return 4;
                         }
                         break;
                     case DockStyle.Bottom:
-                        if (MouseLocation.Y < 7)
+                        if (MouseLocation.Y < 8)
                         {
                             return 1;
                         }
                         break;
                     case DockStyle.Left:
-                        if (MouseLocation.X > Width - 7)
+                        if (MouseLocation.X > Width - 8)
                         {
                             return 2;
                         }

@@ -84,6 +84,11 @@ namespace TK.GraphComponents
 
         }
 
+        public virtual bool canDrop(DropLocation location, TreeNode draggedNode, TreeNode dropNode)
+        {
+            return true;
+        }
+
         void stringNodesTreeView_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
@@ -118,11 +123,11 @@ namespace TK.GraphComponents
                 }
             }
 
+            bool allowDrop = false;
+            DropLocation newDrop = DropLocation.On;
 
             if (Dropped != null && destination != null)
             {
-                DropLocation newDrop;
-
                 int deadZone = destination.Bounds.Height / 4;
 
                 if ((clientHit.Y - destination.Bounds.Y) < deadZone)
@@ -141,12 +146,14 @@ namespace TK.GraphComponents
                     }
                 }
 
-                if (newDrop != DropMode || RefNode != destination)
-                {
-                    RefNode = destination;
-                    DropMode = newDrop;
-                    Invalidate();
-                }
+                allowDrop = true;
+            }
+
+            if (allowDrop && canDrop(newDrop, Dropped, destination))
+            {
+                RefNode = destination;
+                DropMode = newDrop;
+                Invalidate();
             }
             else
             {
@@ -601,6 +608,8 @@ namespace TK.GraphComponents
                 root.SelectedImageIndex = 2;
                 root.ImageIndex = 2;
 
+                SetNodeDisplay(root, Root);
+
                 root.Tag = Root;
 
                 Set(Root, root);
@@ -610,11 +619,15 @@ namespace TK.GraphComponents
                 foreach (stringNode node in Root.Nodes)
                 {
                     TreeNode categNode = new TreeNode(node.Name);
+                    
                     Nodes.Add(categNode);
                     nodesDic.Add(node.Name, categNode);
 
                     categNode.ImageIndex = 2;
                     categNode.SelectedImageIndex = 2;
+
+                    SetNodeDisplay(categNode, node);
+
                     categNode.ToolTipText = node.Description;
                     categNode.Tag = node;
                     Set(node, categNode);
@@ -622,6 +635,25 @@ namespace TK.GraphComponents
             }
 
             ExpandAll();
+        }
+
+        private void SetNodeDisplay(TreeNode inTreeNode, stringNode inStringNode)
+        {
+            if (inStringNode.IconIndex != -1)
+            {
+                inTreeNode.ImageIndex = inStringNode.IconIndex;
+                inTreeNode.SelectedImageIndex = inStringNode.IconIndex;
+            }
+
+            if (inStringNode.BackColor.A != 0)
+            {
+                inTreeNode.BackColor = inStringNode.BackColor;
+            }
+
+            if (inStringNode.ForeColor.A != 0)
+            {
+                inTreeNode.ForeColor = inStringNode.ForeColor;
+            }
         }
 
         private void Set(stringNode inNode, TreeNode parentNode)
@@ -634,6 +666,9 @@ namespace TK.GraphComponents
 
                 categNode.ImageIndex = 2;
                 categNode.SelectedImageIndex = 2;
+
+                SetNodeDisplay(categNode, node);
+
                 categNode.ToolTipText = node.Description;
                 categNode.Tag = node;
                 Set(node, categNode);
