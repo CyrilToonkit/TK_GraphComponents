@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
+using TK.BaseLib;
 
 namespace TK.GraphComponents.Dialogs
 {
@@ -36,18 +37,93 @@ namespace TK.GraphComponents.Dialogs
 
     public class TKMessageBox
     {
+        public static RichDialogResult ShowInput(InputTypes inType, string Message, string Caption, string defaultValue)
+        {
+            object castedObject = null;
+            bool cancelled = false;
+
+            DialogResult result = DialogResult.Abort;
+            TextInputForm form = null;
+
+            while(castedObject == null)
+            {
+                form = new TextInputForm(Message, Caption, "");
+                form.InputValue = defaultValue;
+                form.TopMost = true;
+                result = form.ShowDialog();
+
+                if(result != DialogResult.OK)
+                {
+                    break;
+                }
+
+                switch (inType)
+                {
+                    case InputTypes.Double:
+                        try
+                        {
+                            double castedDouble = TypesHelper.DoubleParse(form.InputValue);
+                            castedObject = castedDouble;
+                        }
+                        catch(Exception e)
+                        {
+                            TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a double !!", "Type error");
+                        }
+                        break;
+                    default:
+                        castedObject = form.InputValue;
+                        break;
+                }
+            }
+
+            return new RichDialogResult(result, castedObject);
+        }
+
         public static RichDialogResult ShowInput(InputTypes inType, string Message, string Caption)
         {
-            TextInputForm form = new TextInputForm(Message, Caption, "");
-            DialogResult result = form.ShowDialog();
-            return new RichDialogResult(result, form.InputValue);
+            return ShowInput(inType, Message, Caption, "");
         }
 
         public static DialogResult ShowMessage(string Message, string Caption)
         {
+            return  ShowMessage(Message, Caption, true);
+        }
+
+        public static DialogResult ShowMessage(string Message, string Caption, bool modal)
+        {
             LongMessageForm form = new LongMessageForm();
             form.Text = Caption;
             form.Message = Message;
+            form.TopMost = true;
+
+            if (modal)
+            {
+                return form.ShowDialog();
+            }
+
+            form.Show();
+
+            return DialogResult.None;
+        }
+
+        /// <summary>
+        /// Show a Dialog in a form with a multi-line textbox for the message
+        /// Returns : DialogResult.OK if "OK" pressed, DialogResult.Cancel if "Cancel" pressed, eventually DialogResult.Yes if "option" is clicked
+        /// </summary>
+        /// <param name="Message"></param>
+        /// <param name="Caption"></param>
+        /// <param name="ShowButtons"></param>
+        /// <param name="OptionText"></param>
+        /// <returns>DialogResult.OK if "OK" pressed, DialogResult.Cancel if "Cancel" pressed, eventually DialogResult.Yes if "option" is clicked</returns>
+        public static DialogResult ShowDialog(string Message, string Caption, bool ShowButtons, string OptionText)
+        {
+            LongMessageForm form = new LongMessageForm();
+            form.Text = Caption;
+            form.Message = Message;
+            form.TopMost = true;
+
+            form.ShowButtons = ShowButtons;
+            form.OptionText = OptionText;
 
             return form.ShowDialog();
         }

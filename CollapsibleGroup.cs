@@ -182,11 +182,11 @@ namespace TK.GraphComponents
                             if (STATUSextending == 4)
                             {
                                 int trans = -screened.X + STATUSMouseLoc.X;
-                                Width = OpenedBaseWidth + trans;
+                                Width = Math.Max(5, OpenedBaseWidth + trans);
                             }
                             else
                             {
-                                Width = OpenedBaseWidth + (screened.X - STATUSMouseLoc.X);
+                                Width = Math.Max(5,OpenedBaseWidth + (screened.X - STATUSMouseLoc.X));
                             }
                         }
                         else

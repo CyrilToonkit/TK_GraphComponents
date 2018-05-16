@@ -7,11 +7,38 @@ using System.Windows.Forms;
 using TK.BaseLib;
 using System.Drawing;
 using TK.BaseLib.CustomData;
+using System.Runtime.InteropServices;
 
 namespace TK.GraphComponents
 {
     public partial class stringNodesTreeView : TreeView
     {
+        #region scroll native functions
+
+        [DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
+        public static extern int GetScrollPos(int hWnd, int nBar);
+
+        [DllImport("user32.dll")]
+        static extern int SetScrollPos(IntPtr hWnd, int nBar, int nPos, bool bRedraw);
+
+        private const int SB_HORZ = 0x0;
+        private const int SB_VERT = 0x1;
+
+        private Point GetTreeViewScrollPos()
+        {
+            return new Point(
+                GetScrollPos((int)Handle, SB_HORZ),
+                GetScrollPos((int)Handle, SB_VERT));
+        }
+
+        private void SetTreeViewScrollPos(Point scrollPosition)
+        {
+            SetScrollPos((IntPtr)Handle, SB_HORZ, scrollPosition.X, true);
+            SetScrollPos((IntPtr)Handle, SB_VERT, scrollPosition.Y, true); 
+        }
+
+        #endregion
+
         #region Events
         public event NodeRenamedEventHandler NodeRenamedEvent;
         public event NodeAddedEventHandler NodeAddedEvent;
@@ -324,7 +351,7 @@ namespace TK.GraphComponents
 
         void stringNodesTreeView_ItemDrag(object sender, ItemDragEventArgs e)
         {
-            if (EnableReorderNodes && (e.Item as TreeNode).Tag is stringNode)
+            if ((EnableReorderNodes || EnableDragNodes) && (e.Item as TreeNode).Tag is stringNode)
             {
                 mNameBox.DoDragDrop(e.Item as TreeNode, DragDropEffects.Copy);
             }
@@ -348,6 +375,12 @@ namespace TK.GraphComponents
 
         Dictionary<string, TreeNode> nodesDic = new Dictionary<string, TreeNode>();
         stringNode StringNodeRoot;
+        public stringNode Root
+        {
+            get { return StringNodeRoot; }
+            set { StringNodeRoot = value; }
+        }
+
         DropLocation DropMode = DropLocation.On;
         TreeNode RefNode = null;
         bool IsAdding = false;
@@ -371,6 +404,13 @@ namespace TK.GraphComponents
         {
             get { return mEnableManageNodes; }
             set { mEnableManageNodes = value; }
+        }
+
+        bool mEnableDragNodes = false;
+        public bool EnableDragNodes
+        {
+            get { return mEnableDragNodes; }
+            set { mEnableDragNodes = value; }
         }
 
         bool mEnableReorderNodes = false;
@@ -585,13 +625,33 @@ namespace TK.GraphComponents
             }
         }
 
-        private void Reset()
+        public void Reset()
         {
             Set(StringNodeRoot, CreateRoot);
         }
 
         public void Set(stringNode Root, bool createRoot)
         {
+            //Folded nodes / Selected nodes
+            List<string> foldedNodes = new List<string>();
+            List<string> selectedNodes = new List<string>();
+
+            foreach (string nodeName in nodesDic.Keys)
+            {
+                if (!nodesDic[nodeName].IsExpanded)
+                {
+                    foldedNodes.Add(nodeName);
+                }
+
+                if (nodesDic[nodeName].IsSelected)
+                {
+                    selectedNodes.Add(nodeName);
+                }
+            }
+
+            //Scroll
+            Point scroll = GetTreeViewScrollPos();
+
             Nodes.Clear();
             nodesDic.Clear();
 
@@ -635,6 +695,24 @@ namespace TK.GraphComponents
             }
 
             ExpandAll();
+
+            //Folded nodes
+            foreach (string nodeName in foldedNodes)
+            {
+                if (nodesDic.ContainsKey(nodeName))
+                {
+                    nodesDic[nodeName].Collapse(true);
+                }
+            }
+
+            //Selected nodes ??
+            if (selectedNodes.Count > 0 && nodesDic.ContainsKey(selectedNodes[0]))
+            {
+                SelectedNode = nodesDic[selectedNodes[0]];
+            }
+
+            //Scroll
+            SetTreeViewScrollPos(scroll);
         }
 
         private void SetNodeDisplay(TreeNode inTreeNode, stringNode inStringNode)
@@ -654,15 +732,36 @@ namespace TK.GraphComponents
             {
                 inTreeNode.ForeColor = inStringNode.ForeColor;
             }
+
+            if (!inStringNode.Active)
+            {
+                int meanBackColor = (int)((inTreeNode.BackColor.R + inTreeNode.BackColor.R + inTreeNode.BackColor.B) / 3.0);
+                int meanForeColor = (int)((inTreeNode.ForeColor.R + inTreeNode.ForeColor.R + inTreeNode.ForeColor.B) / 3.0);
+                int delta = (int)((meanBackColor - meanForeColor) / 5.0);
+
+                meanBackColor = Math.Max(0, meanBackColor - 50 + delta);
+                meanForeColor = Math.Max(0, meanForeColor - 50 - delta);
+
+                inTreeNode.BackColor = Color.FromArgb(inTreeNode.BackColor.A, meanBackColor, meanBackColor, meanBackColor);
+                inTreeNode.ForeColor = Color.FromArgb(inTreeNode.ForeColor.A, meanForeColor, meanForeColor, meanForeColor);
+            }
         }
 
         private void Set(stringNode inNode, TreeNode parentNode)
         {
             foreach (stringNode node in inNode.Nodes)
             {
-                TreeNode categNode = new TreeNode(node.Name);
-                parentNode.Nodes.Add(categNode);
-                nodesDic.Add(node.Name, categNode);
+                TreeNode categNode = null;
+                if (!nodesDic.ContainsKey(node.Name))
+                {
+                    categNode = new TreeNode(node.Name);
+                    parentNode.Nodes.Add(categNode);
+                    nodesDic.Add(node.Name, categNode);
+                }
+                else
+                {
+                    categNode = nodesDic[node.Name];
+                }
 
                 categNode.ImageIndex = 2;
                 categNode.SelectedImageIndex = 2;

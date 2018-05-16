@@ -16,7 +16,7 @@ namespace TK.GraphComponents
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, Int32 wMsg, bool wParam, Int32 lParam);
-        private const int WM_SETREDRAW = 11; 
+        private const int WM_SETREDRAW = 11;
 
         public TK_Splash()
         {
@@ -104,6 +104,13 @@ namespace TK.GraphComponents
             loads = false; 
         }
 
+        private void kill()
+        {
+            timer1.Stop();
+            Close();
+            _thread.Abort();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             elapsed += (double)timer1.Interval / 1000.0;
@@ -111,9 +118,7 @@ namespace TK.GraphComponents
             {
                 if (elapsed >= (Granted ? DURATION : MAXDURATION))
                 {
-                    timer1.Stop();
-                    Close();
-                    _thread.Abort();
+                    kill();
                     return;
                 }
             }

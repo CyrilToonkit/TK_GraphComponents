@@ -196,7 +196,7 @@
             this.checkLB.FormattingEnabled = true;
             this.checkLB.Location = new System.Drawing.Point(0, 52);
             this.checkLB.Name = "checkLB";
-            this.checkLB.Size = new System.Drawing.Size(241, 277);
+            this.checkLB.Size = new System.Drawing.Size(240, 278);
             this.checkLB.TabIndex = 2;
             this.checkLB.SelectedIndexChanged += new System.EventHandler(this.checkLB_SelectedIndexChanged);
             // 
@@ -216,7 +216,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(241, 28);
+            this.panel2.Size = new System.Drawing.Size(240, 28);
             this.panel2.TabIndex = 4;
             // 
             // nameTB
@@ -244,11 +244,11 @@
             this.collapsibleGroup1.Controls.Add(this.checkPG);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(241, 24);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(240, 24);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 150;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(250, 306);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(251, 306);
             this.collapsibleGroup1.TabIndex = 1;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "Properties";
@@ -258,7 +258,7 @@
             this.checkPG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkPG.Location = new System.Drawing.Point(3, 16);
             this.checkPG.Name = "checkPG";
-            this.checkPG.Size = new System.Drawing.Size(244, 287);
+            this.checkPG.Size = new System.Drawing.Size(245, 287);
             this.checkPG.TabIndex = 1;
             this.checkPG.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.checkPG_PropertyValueChanged);
             // 

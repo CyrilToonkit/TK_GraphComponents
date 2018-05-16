@@ -26,6 +26,7 @@ namespace TK.GraphComponents.Dialogs
         public string InputValue
         {
             get { return inputTB.Text; }
+            set { inputTB.Text = value; }
         }
 
         private void okBT_Click(object sender, EventArgs e)

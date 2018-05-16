@@ -7,6 +7,11 @@ namespace TK.GraphComponents.Animation
 {
     public class RemapRow
     {
+        public RemapRow()
+        {
+
+        }
+
         public RemapRow(string inType, string inOriginal, string inRetarget)
         {
             type = inType;

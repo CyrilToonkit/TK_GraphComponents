@@ -174,7 +174,6 @@ namespace TK.GraphComponents.Check
                     _loadedList.Checks.Remove(targetCheck);
                     _loadedList.Checks.Insert(idx - 1, targetCheck);
                     UpdateLB();
-                    checkLB.SelectedIndex--;
                 }
             }
         }
@@ -190,7 +189,6 @@ namespace TK.GraphComponents.Check
                     _loadedList.Checks.Remove(targetCheck);
                     _loadedList.Checks.Insert(idx + 1, targetCheck);
                     UpdateLB();
-                    checkLB.SelectedIndex++;
                 }
             }
         }

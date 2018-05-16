@@ -81,6 +81,13 @@
     <Compile Include="Check\CheckListEditorCtrl.Designer.cs">
       <DependentUpon>CheckListEditorCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="RichResult.cs" />
+    <Compile Include="TK_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TK_Splash.Designer.cs">
+      <DependentUpon>TK_Splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\LongMessageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +146,12 @@
     </Compile>
     <Compile Include="FolderBrowserEdit.Designer.cs">
       <DependentUpon>FolderBrowserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MappingUCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MappingUCtrl.Designer.cs">
+      <DependentUpon>MappingUCtrl.cs</DependentUpon>
     </Compile>
     <Compile Include="MimicForm.cs">
       <SubType>UserControl</SubType>
@@ -229,11 +242,11 @@
       <DependentUpon>TK_EmptyForm.cs</DependentUpon>
     </Compile>
     <Compile Include="TK_INFO.cs" />
-    <Compile Include="TK_Splash.cs">
+    <Compile Include="TK_SplashLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TK_Splash.Designer.cs">
-      <DependentUpon>TK_Splash.cs</DependentUpon>
+    <Compile Include="TK_SplashLicense.Designer.cs">
+      <DependentUpon>TK_SplashLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="TransparentPanel.cs">
       <SubType>Component</SubType>
@@ -250,6 +263,10 @@
       <DependentUpon>RetimeCtrl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="TK_Splash.resx">
+      <DependentUpon>TK_Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomData\PreferencesForm.resx">
       <DependentUpon>PreferencesForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -262,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FixedRatioUCtrl.resx">
       <DependentUpon>FixedRatioUCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MappingUCtrl.resx">
+      <DependentUpon>MappingUCtrl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -279,8 +299,8 @@
     <EmbeddedResource Include="TitledForm.resx">
       <DependentUpon>TitledForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TK_Splash.resx">
-      <DependentUpon>TK_Splash.cs</DependentUpon>
+    <EmbeddedResource Include="TK_SplashLicense.resx">
+      <DependentUpon>TK_SplashLicense.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -366,6 +386,7 @@
     <None Include="Resources\Keying_OnKey.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Resources\Oscar_LD.png" />
     <Content Include="Resources\VersionInfo.xml" />
   </ItemGroup>
   <ItemGroup>

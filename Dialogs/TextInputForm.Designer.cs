@@ -58,7 +58,7 @@
             this.cancelBT.Location = new System.Drawing.Point(170, 3);
             this.cancelBT.Name = "cancelBT";
             this.cancelBT.Size = new System.Drawing.Size(161, 29);
-            this.cancelBT.TabIndex = 1;
+            this.cancelBT.TabIndex = 2;
             this.cancelBT.Text = "Cancel";
             this.cancelBT.UseVisualStyleBackColor = true;
             // 
@@ -68,7 +68,7 @@
             this.okBT.Location = new System.Drawing.Point(3, 3);
             this.okBT.Name = "okBT";
             this.okBT.Size = new System.Drawing.Size(161, 29);
-            this.okBT.TabIndex = 0;
+            this.okBT.TabIndex = 1;
             this.okBT.Text = "OK";
             this.okBT.UseVisualStyleBackColor = true;
             this.okBT.Click += new System.EventHandler(this.okBT_Click);
@@ -81,7 +81,8 @@
             this.messageTB.Name = "messageTB";
             this.messageTB.ReadOnly = true;
             this.messageTB.Size = new System.Drawing.Size(334, 33);
-            this.messageTB.TabIndex = 1;
+            this.messageTB.TabIndex = 3;
+            this.messageTB.TabStop = false;
             // 
             // inputTB
             // 
@@ -89,7 +90,7 @@
             this.inputTB.Location = new System.Drawing.Point(0, 33);
             this.inputTB.Name = "inputTB";
             this.inputTB.Size = new System.Drawing.Size(334, 20);
-            this.inputTB.TabIndex = 2;
+            this.inputTB.TabIndex = 0;
             // 
             // TextInputForm
             // 
