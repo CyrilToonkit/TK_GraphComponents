@@ -1,3 +1,4 @@
 [submodule "TK_BaseLib"]
 	path = TK_BaseLib
 	url = https://github.com/CyrilToonkit/TK_BaseLib.git
+	branch = master
