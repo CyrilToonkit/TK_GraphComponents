@@ -8,15 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using TK.GraphComponents;
 using TK.BaseLib;
-using TK.BaseLib.Picture;
-using TK.BaseLib.Checking;
-
 using System.Net;
-using System.Text;
 using System.IO;
-
 using System.Management;
-using System.Windows.Forms;
 using System.Reflection;
 using System.Globalization;
 using System.Text.RegularExpressions;
