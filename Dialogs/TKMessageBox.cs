@@ -40,7 +40,6 @@ namespace TK.GraphComponents.Dialogs
         public static RichDialogResult ShowInput(InputTypes inType, string Message, string Caption, string defaultValue)
         {
             object castedObject = null;
-            bool cancelled = false;
 
             DialogResult result = DialogResult.Abort;
             TextInputForm form = null;
@@ -65,7 +64,7 @@ namespace TK.GraphComponents.Dialogs
                             double castedDouble = TypesHelper.DoubleParse(form.InputValue);
                             castedObject = castedDouble;
                         }
-                        catch(Exception e)
+                        catch(Exception)
                         {
                             TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a double !!", "Type error");
                         }
