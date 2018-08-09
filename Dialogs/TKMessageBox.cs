@@ -47,8 +47,11 @@ namespace TK.GraphComponents.Dialogs
             while(castedObject == null)
             {
                 form = new TextInputForm(Message, Caption, "");
+                form.StartPosition = FormStartPosition.Manual;
+                form.Location = form.PointToClient(Cursor.Position);
                 form.InputValue = defaultValue;
                 form.TopMost = true;
+
                 result = form.ShowDialog();
 
                 if(result != DialogResult.OK)
@@ -67,6 +70,40 @@ namespace TK.GraphComponents.Dialogs
                         catch(Exception)
                         {
                             TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a double !!", "Type error");
+                        }
+                        break;
+                    case InputTypes.Float:
+                        try
+                        {
+
+                            float castedFloat = TypesHelper.FloatParse(form.InputValue);
+                            castedObject = castedFloat;
+                        }
+                        catch (Exception)
+                        {
+                            TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a float !!", "Type error");
+                        }
+                        break;
+                    case InputTypes.Bool:
+                        try
+                        {
+                            bool castedBool = Convert.ToBoolean(form.InputValue);
+                            castedObject = castedBool;
+                        }
+                        catch (Exception)
+                        {
+                            TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a bool !!", "Type error");
+                        }
+                        break;
+                    case InputTypes.Int:
+                        try
+                        {
+                            int castedInt = Int32.Parse(form.InputValue);
+                            castedObject = castedInt;
+                        }
+                        catch (Exception)
+                        {
+                            TKMessageBox.ShowError("Cannot cast " + form.InputValue + " as a int !!", "Type error");
                         }
                         break;
                     default:
