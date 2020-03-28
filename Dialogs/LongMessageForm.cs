@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace TK.GraphComponents.Dialogs
 {
-    public partial class LongMessageForm : Form
+    public partial class LongMessageForm : PlaceableForm
     {
         public LongMessageForm()
         {

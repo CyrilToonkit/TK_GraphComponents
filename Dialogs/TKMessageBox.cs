@@ -132,6 +132,8 @@ namespace TK.GraphComponents.Dialogs
             form.Message = Message;
             form.TopMost = true;
 
+            form.SetDesiredStartLocation(Cursor.Position.X, Cursor.Position.Y);
+
             if (modal)
             {
                 return form.ShowDialog();

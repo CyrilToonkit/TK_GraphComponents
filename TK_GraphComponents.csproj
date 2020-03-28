@@ -81,6 +81,12 @@
     <Compile Include="Check\CheckListEditorCtrl.Designer.cs">
       <DependentUpon>CheckListEditorCtrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlaceableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlaceableForm.Designer.cs">
+      <DependentUpon>PlaceableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RichResult.cs" />
     <Compile Include="TK_Splash.cs">
       <SubType>Form</SubType>

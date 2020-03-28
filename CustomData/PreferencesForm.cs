@@ -17,14 +17,12 @@ namespace TK.GraphComponents.CustomData
     /// Basically displays a PropertyGrid for the SaveAbleData and Save, Load, Reset Defaults buttons
     /// Alternatively we can use an AlternateSaveAbleEditor in place of the propertyGrid
     /// </summary>
-    public partial class PreferencesForm : Form
+    public partial class PreferencesForm : PlaceableForm
     {
         // == CONSTRUCTORS ================================================================
 
         public PreferencesForm()
         {
-            InitializeComponent();
-
             MyCollectionEditor.MyFormClosed += new MyCollectionEditor.MyFormClosedEventHandler(MyCollectionEditor_MyFormClosed);
             PrefPropertyGrid.PropertyValueChanged += new PropertyValueChangedEventHandler(PrefPropertyGrid_PropertyValueChanged);
             PrefChanged += new PrefChangedEventHandler(PreferencesForm_PrefChanged);
