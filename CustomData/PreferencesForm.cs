@@ -23,6 +23,8 @@ namespace TK.GraphComponents.CustomData
 
         public PreferencesForm()
         {
+            InitializeComponent();
+
             MyCollectionEditor.MyFormClosed += new MyCollectionEditor.MyFormClosedEventHandler(MyCollectionEditor_MyFormClosed);
             PrefPropertyGrid.PropertyValueChanged += new PropertyValueChangedEventHandler(PrefPropertyGrid_PropertyValueChanged);
             PrefChanged += new PrefChangedEventHandler(PreferencesForm_PrefChanged);
