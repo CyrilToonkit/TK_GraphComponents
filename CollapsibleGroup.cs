@@ -182,11 +182,11 @@ namespace TK.GraphComponents
                             if (STATUSextending == 4)
                             {
                                 int trans = -screened.X + STATUSMouseLoc.X;
-                                Width = Math.Max(5, OpenedBaseWidth + trans);
+                                Width = Math.Max(20, OpenedBaseWidth + trans);
                             }
                             else
                             {
-                                Width = Math.Max(5,OpenedBaseWidth + (screened.X - STATUSMouseLoc.X));
+                                Width = Math.Max(20,OpenedBaseWidth + (screened.X - STATUSMouseLoc.X));
                             }
                         }
                         else
@@ -194,11 +194,11 @@ namespace TK.GraphComponents
                             if (STATUSextending == 1)
                             {
                                 int trans = -screened.Y + STATUSMouseLoc.Y;
-                                Height = OpenedBaseHeight + trans;
+                                Height = Math.Max(20, OpenedBaseHeight + trans);
                             }
                             else
                             {
-                                Height = OpenedBaseHeight + (screened.Y - STATUSMouseLoc.Y);
+                                Height = Math.Max(20, OpenedBaseHeight + (screened.Y - STATUSMouseLoc.Y));
                             }
                         }
                     }

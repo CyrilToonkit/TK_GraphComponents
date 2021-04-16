@@ -37,6 +37,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+            this.collapsibleGroup2 = new TK.GraphComponents.CollapsibleGroup();
             this.checkListEditorCtrl1 = new TK.GraphComponents.Check.CheckListEditorCtrl();
             this.completeSlider1 = new TK.GraphComponents.CompleteSlider();
             this.realSlider1 = new TK.GraphComponents.RealSlider();
@@ -47,11 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.realSlider1)).BeginInit();
             this.collapsibleGroup1.SuspendLayout();
@@ -117,7 +118,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(106, 365);
+            this.button5.Location = new System.Drawing.Point(106, 356);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 23);
             this.button5.TabIndex = 35;
@@ -134,6 +135,63 @@
             this.button6.Text = "Allow License";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(106, 307);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(110, 23);
+            this.button7.TabIndex = 39;
+            this.button7.Text = "Search License";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(428, 322);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(298, 20);
+            this.textBox1.TabIndex = 41;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(428, 345);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(298, 20);
+            this.textBox2.TabIndex = 42;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(428, 368);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(298, 23);
+            this.button8.TabIndex = 43;
+            this.button8.Text = "Get correlation";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // propertyGrid1
+            // 
+            this.propertyGrid1.Location = new System.Drawing.Point(12, 385);
+            this.propertyGrid1.Name = "propertyGrid1";
+            this.propertyGrid1.Size = new System.Drawing.Size(159, 166);
+            this.propertyGrid1.TabIndex = 45;
+            // 
+            // collapsibleGroup2
+            // 
+            this.collapsibleGroup2.AllowResize = true;
+            this.collapsibleGroup2.Collapsed = false;
+            this.collapsibleGroup2.CollapseOnClick = true;
+            this.collapsibleGroup2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.collapsibleGroup2.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
+            this.collapsibleGroup2.Location = new System.Drawing.Point(0, 590);
+            this.collapsibleGroup2.Name = "collapsibleGroup2";
+            this.collapsibleGroup2.OpenedBaseHeight = 58;
+            this.collapsibleGroup2.OpenedBaseWidth = 200;
+            this.collapsibleGroup2.Size = new System.Drawing.Size(829, 58);
+            this.collapsibleGroup2.TabIndex = 47;
+            this.collapsibleGroup2.TabStop = false;
+            this.collapsibleGroup2.Text = "collapsibleGroup2";
             // 
             // checkListEditorCtrl1
             // 
@@ -246,11 +304,11 @@
             this.collapsibleGroup1.Controls.Add(this.label1);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(787, 0);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(829, 0);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 150;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(387, 648);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(345, 648);
             this.collapsibleGroup1.TabIndex = 1;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "collapsibleGroup1";
@@ -261,7 +319,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(381, 583);
+            this.label3.Size = new System.Drawing.Size(339, 583);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -272,7 +330,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 599);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(381, 23);
+            this.label2.Size = new System.Drawing.Size(339, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,57 +341,17 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 622);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(381, 23);
+            this.label1.Size = new System.Drawing.Size(339, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(106, 307);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(110, 23);
-            this.button7.TabIndex = 39;
-            this.button7.Text = "Search License";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(428, 322);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(298, 20);
-            this.textBox1.TabIndex = 41;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(428, 345);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(298, 20);
-            this.textBox2.TabIndex = 42;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(428, 368);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(298, 23);
-            this.button8.TabIndex = 43;
-            this.button8.Text = "Get correlation";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // propertyGrid1
-            // 
-            this.propertyGrid1.Location = new System.Drawing.Point(12, 399);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.Size = new System.Drawing.Size(159, 223);
-            this.propertyGrid1.TabIndex = 45;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 648);
+            this.Controls.Add(this.collapsibleGroup2);
             this.Controls.Add(this.propertyGrid1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox2);
@@ -390,8 +408,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PropertyGrid propertyGrid1;
-
-
-
+        private TK.GraphComponents.CollapsibleGroup collapsibleGroup2;
     }
 }
