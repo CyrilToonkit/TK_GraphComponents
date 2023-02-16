@@ -184,11 +184,11 @@
             this.collapsibleGroup2.CollapseOnClick = true;
             this.collapsibleGroup2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.collapsibleGroup2.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup2.Location = new System.Drawing.Point(0, 590);
+            this.collapsibleGroup2.Location = new System.Drawing.Point(0, 589);
             this.collapsibleGroup2.Name = "collapsibleGroup2";
             this.collapsibleGroup2.OpenedBaseHeight = 58;
             this.collapsibleGroup2.OpenedBaseWidth = 200;
-            this.collapsibleGroup2.Size = new System.Drawing.Size(829, 58);
+            this.collapsibleGroup2.Size = new System.Drawing.Size(828, 59);
             this.collapsibleGroup2.TabIndex = 47;
             this.collapsibleGroup2.TabStop = false;
             this.collapsibleGroup2.Text = "collapsibleGroup2";
@@ -304,11 +304,11 @@
             this.collapsibleGroup1.Controls.Add(this.label1);
             this.collapsibleGroup1.Dock = System.Windows.Forms.DockStyle.Right;
             this.collapsibleGroup1.DockingChanges = TK.GraphComponents.DockingPossibilities.All;
-            this.collapsibleGroup1.Location = new System.Drawing.Point(829, 0);
+            this.collapsibleGroup1.Location = new System.Drawing.Point(828, 0);
             this.collapsibleGroup1.Name = "collapsibleGroup1";
             this.collapsibleGroup1.OpenedBaseHeight = 150;
             this.collapsibleGroup1.OpenedBaseWidth = 200;
-            this.collapsibleGroup1.Size = new System.Drawing.Size(345, 648);
+            this.collapsibleGroup1.Size = new System.Drawing.Size(346, 648);
             this.collapsibleGroup1.TabIndex = 1;
             this.collapsibleGroup1.TabStop = false;
             this.collapsibleGroup1.Text = "collapsibleGroup1";
@@ -319,7 +319,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(339, 583);
+            this.label3.Size = new System.Drawing.Size(340, 583);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,7 +330,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label2.Location = new System.Drawing.Point(3, 599);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(339, 23);
+            this.label2.Size = new System.Drawing.Size(340, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -341,7 +341,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(3, 622);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(339, 23);
+            this.label1.Size = new System.Drawing.Size(340, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
